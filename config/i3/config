@@ -9,7 +9,7 @@ font pango: Ubuntu Mono 12
 floating_modifier $super
 
 #sexy intro
-exec_always --no-startup-id i3-msg "workspace 1; exec urxvt -e bash -c 'neofetch | lolcat'" 
+exec_always --no-startup-id i3-msg "workspace 1; exec urxvt -e bash -c 'neofetch | lolcat && bash'" 
 
 #workspace tweak for sexy intro
 for_window [workspace="1"] floating enable
