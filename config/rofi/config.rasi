@@ -5,6 +5,6 @@ configuration {
   hide-scrollbar:     true;
   disable-history:    false;
   modi:               "drun";
-  display-drun:       "apps";
-  columns: 2;
+  display-drun:       "apps ::";
+  columns: 1;
 }
