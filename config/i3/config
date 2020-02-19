@@ -9,11 +9,11 @@ font pango: Ubuntu Mono 12
 floating_modifier $super
 
 #sexy intro
-exec_always --no-startup-id i3-msg "workspace 1; exec urxvt -e bash -c 'neofetch | lolcat && bash'" 
+#exec_always --no-startup-id i3-msg "workspace 1; exec urxvt -e bash -c 'neofetch | lolcat && bash'" 
 
 #workspace tweak for sexy intro
-for_window [workspace="1"] floating enable
-floating_maximum_size 700 x 500
+#for_window [workspace="1"] floating enable
+#floating_maximum_size 700 x 500
 
 #autostart
 exec_always --no-startup-id feh --bg-scale ~/.wallpaper.jpg
@@ -26,8 +26,8 @@ bindsym $super+Return exec i3-sensible-terminal
 
 #rofi menus
 bindsym $super+d exec ~/.config/rofi/scripts/appsmenu.sh
-bindsym $super+p exec ~/.config/rofi/scripts/powermenu.sh
-bindsym $super+w exec ~/.config/rofi/scripts/networkmenu.py
+#bindsym $super+p exec ~/.config/rofi/scripts/powermenu.sh
+#bindsym $super+w exec ~/.config/rofi/scripts/networkmenu.py
 
 # common apps keybinds
 bindsym Print exec scrot 'Cheese_%a-%d%b%y_%H.%M.png' -e 'viewnior ~/$f'
@@ -53,6 +53,9 @@ bindsym XF86AudioStop exec mpc stop
 bindsym $super+q kill
 bindsym $alt+F4 kill
 
+#kill not responding windows
+bindsym $super+shift+x exec xkill
+
 # change focus
 bindsym $super+Left focus left
 bindsym $super+Down focus down
@@ -60,10 +63,10 @@ bindsym $super+Up focus up
 bindsym $super+Right focus right
 
 # change focus(alternate)
-bindsym $super+j focus left
-bindsym $super+k focus down
-bindsym $super+l focus up
-bindsym $super+semicolon focus right
+bindsym $super+h focus left
+bindsym $super+j focus down
+bindsym $super+k focus up
+bindsym $super+l focus right
 
 
 # move focused window
@@ -73,13 +76,13 @@ bindsym $super+Shift+Up move up
 bindsym $super+Shift+Right move right
 
 # move focused window(alternate)
-bindsym $super+Shift+j move left
-bindsym $super+Shift+k move down
-bindsym $super+Shift+l move up
-bindsym $super+Shift+semicolon move right
+bindsym $super+Shift+h move left
+bindsym $super+Shift+j move down
+bindsym $super+Shift+k move up
+bindsym $super+Shift+l move right
 
 # split in horizontal orientation
-bindsym $super+h split h
+bindsym $super+backslash split h
 
 # split in vertical orientation
 bindsym $super+v split v
@@ -99,26 +102,30 @@ bindsym $super+Shift+space focus mode_toggle
 # switch to workspace
 bindsym $alt+Control+Right workspace next
 bindsym $alt+Control+Left workspace prev
-bindsym $super+1 workspace 1
-bindsym $super+2 workspace 2
-bindsym $super+3 workspace 3
+bindsym $super+1 workspace 1:
+bindsym $super+2 workspace 2:
+bindsym $super+3 workspace 3:
 bindsym $super+4 workspace 4
 bindsym $super+5 workspace 5
-bindsym $super+6 workspace 6
+bindsym $super+9 workspace 
 
 # move focused container to workspace
-bindsym $super+Shift+1 move container to workspace 1
-bindsym $super+Shift+2 move container to workspace 2
-bindsym $super+Shift+3 move container to workspace 3
+bindsym $super+Shift+1 move container to workspace 1:
+bindsym $super+Shift+2 move container to workspace 2:
+bindsym $super+Shift+3 move container to workspace 3:
 bindsym $super+Shift+4 move container to workspace 4
 bindsym $super+Shift+5 move container to workspace 5
-bindsym $super+Shift+6 move container to workspace 6
+bindsym $super+Shift+9 move container to workspace 
+
+# move workspace
+bindsym $super+m workspace next
+bindsym $super+n workspace prev
 
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $super+Shift+r restart
 
 # exit i3
-bindsym $super+c exec "i3-nagbar -t warning -m 'Really, exit?' -b 'Yes' 'i3-msg exit'"
+#bindsym $super+c exec "i3-nagbar -t warning -m 'Really, exit?' -b 'Yes' 'i3-msg exit'"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -150,11 +157,11 @@ bar {
 for_window [class=".*"] border pixel 2
 gaps inner 18
 #assign [class="URxvt"] 1
-assign [class="firefox"]  3
-#for window [class="Nautilus"] move to workspace 4
-#for_window [class="vlc"] move to workspace 5
+assign [class="firefox"]  2:
+assign [class="Org.gnome.Nautilus"]  3:
+assign [class="vlc"] 
 #assign [class=Audacity|Vlc|mpv|Ghb|Xfburn|Gimp*|Inkscape] 5
-assign [class="Spotify"] 6
+assign [class="spotify free"] 6
 #for_window [class=Viewnior|feh|Audacious|File-roller|Lxappearance|Lxtask|Pavucontrol] floating enable
 #for_window [class=URxvt|Firefox|Geany|Evince|Soffice|libreoffice*|mpv|Ghb|Xfburn|Gimp*|Inkscape|Vlc|Lxappearance|Audacity] focus
 #for_window [class=Xfburn|GParted|System-config-printer.py|Lxtask|Pavucontrol|Exo-helper*|Lxrandr|Arandr] focus
