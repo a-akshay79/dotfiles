@@ -3,41 +3,41 @@
 ! ------------------------------------------------------------------------------
 
 ! special
-*.foreground:   #a6a28c
-*.background:   #131520
-*.cursorColor:  #a6a28c
+*.foreground:   #cfdfc3
+*.background:   #050604
+*.cursorColor:  #cfdfc3
 
 ! black
-*.color0:       #20201d
-*.color8:       #7d7a68
+*.color0:       #0a0b09
+*.color8:       #f096b3
 
 ! red
-*.color1:       #d73737
-*.color9:       #d73737
+*.color1:       #151813
+*.color9:       #84c521
 
 ! green
-*.color2:       #60ac39
-*.color10:      #60ac39
+*.color2:       #262a23
+*.color10:      #1b8eb9
 
 ! yellow
-*.color3:       #cfb017
-*.color11:      #cfb017
+*.color3:       #3d4339
+*.color11:      #e3a21b
 
 ! blue
-*.color4:       #6684e1
-*.color12:      #6684e1
+*.color4:       #5b6255
+*.color12:      #f2a2bb
 
 ! magenta
-*.color5:       #b854d4
-*.color13:      #b854d4
+*.color5:       #7e8877
+*.color13:      #fe7fac
 
 ! cyan
-*.color6:       #1fad83
-*.color14:      #1fad83
+*.color6:       #a8b59e
+*.color14:      #6d9446
 
 ! white
-*.color7:       #a6a28c
-*.color15:      #fefbec
+*.color7:       #d7e8cb
+*.color15:      #f74491
 
 
 
@@ -45,10 +45,10 @@
 ! Font configuration
 ! ------------------------------------------------------------------------------
 
-URxvt*font:				xft:Ubuntu Mono:regular:size=12
-URxvt*boldFont:			xft:Ubuntu Mono:bold:size=12
-URxvt*italicFont:		xft:Ubuntu Mono:italic:size=12
-URxvt*boldItalicFont:	xft:Ubuntu Mono:bold italic:size=12
+URxvt*font:				xft:Ubuntu Mono:regular:size=13
+URxvt*boldFont:			xft:Ubuntu Mono:bold:size=13
+URxvt*italicFont:		xft:Ubuntu Mono:italic:size=13
+URxvt*boldItalicFont:	xft:Ubuntu Mono:bold italic:size=13
 
 ! ------------------------------------------------------------------------------
 ! Xft Font Configuration
