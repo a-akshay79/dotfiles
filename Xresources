@@ -4,7 +4,7 @@
 
 ! special
 *.foreground:   #cfdfc3
-*.background:   #050604
+*.background:   #131520
 *.cursorColor:  #cfdfc3
 
 ! black
@@ -117,6 +117,6 @@ URxvt.keysym.Control-Left:	\033[1;5D
 ! dmenu.foreground:	        #d8dee9
 
 ! TRANSPARENCY SETTINGS
-urxvt*depth: 32
-urxvt*background: rgba:0000/0000/0200/c800
+!urxvt*depth: 32
+!urxvt*background: rgba:0000/0000/0200/c800
                                                            
