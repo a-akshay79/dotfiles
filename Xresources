@@ -3,41 +3,41 @@
 ! ------------------------------------------------------------------------------
 
 ! special
-*.foreground:   #cfdfc3
-*.background:   #131520
-*.cursorColor:  #cfdfc3
+*.foreground:   #cde0b7
+*.background:   #050604
+*.cursorColor:  #cde0b7
 
 ! black
-*.color0:       #0a0b09
-*.color8:       #f096b3
+*.color0:       #0a0c07
+*.color8:       #b88447
 
 ! red
-*.color1:       #151813
-*.color9:       #84c521
+*.color1:       #151811
+*.color9:       #55bfe9
 
 ! green
-*.color2:       #262a23
-*.color10:      #1b8eb9
+*.color2:       #252a20
+*.color10:      #f9a2c3
 
 ! yellow
-*.color3:       #3d4339
-*.color11:      #e3a21b
+*.color3:       #3c4335
+*.color11:      #79a029
 
 ! blue
-*.color4:       #5b6255
-*.color12:      #f2a2bb
+*.color4:       #5a634f
+*.color12:      #f7ac48
 
 ! magenta
-*.color5:       #7e8877
-*.color13:      #fe7fac
+*.color5:       #7d896f
+*.color13:      #87ac48
 
 ! cyan
-*.color6:       #a8b59e
-*.color14:      #6d9446
+*.color6:       #a6b694
+*.color14:      #c674fc
 
 ! white
-*.color7:       #d7e8cb
-*.color15:      #f74491
+*.color7:       #d5e9be
+*.color15:      #caa4ea
 
 
 
@@ -82,10 +82,14 @@ URxvt*scrollBar:		false
 URxvt*scrollBar_right:	false
 URxvt*internalBorder:	24
 URxvt*externalBorder:	0
-URxvt.geometrvv
+URxvt.geometry:			84x22
+
+! perl extensions
+URxvt.perl-ext-common:	default,clipboard,url-select,keyboard-select
+
 ! macros for clipboard and selection
-!URxvt.copyCommand:		xclip -i -selection clipboard
-!URxvt.pasteCommand:		xclip -o -selection clipboard
+URxvt.copyCommand:		xclip -i -selection clipboard
+URxvt.pasteCommand:		xclip -o -selection clipboard
 URxvt.keysym.Shift-Control-C:		perl:clipboard:copy
 URxvt.keysym.Shift-Control-V:		perl:clipboard:paste
 URxvt.keysym.M-C-v:		perl:clipboard:paste_escaped
@@ -95,7 +99,7 @@ URxvt.keysym.M-u:		perl:url-select:select_next
 URxvt.urlLauncher:		firefox
 URxvt.underlineURLs:	true
 URxvt.urlButton:		1     
-URxvt.perl-ext-common: default,clipboard
+
 
 ! scroll one line
 URxvt.keysym.Shift-Up:		command:\033]720;1\007
