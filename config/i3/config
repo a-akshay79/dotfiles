@@ -3,7 +3,7 @@ set $super Mod1
 set $alt Mod4
 
 # set font
-font pango: Ubuntu Mono 12
+font pango: Ubuntu Mono 14
 
 # Use Mouse+$super to drag floating windows to their wanted position
 floating_modifier $super
@@ -40,8 +40,8 @@ bindsym XF86AudioLowerVolume exec amixer -q set Master 5%-
 bindsym XF86AudioMute exec amixer set Master toggle
 
 #change brighness
-bindsym XF86MonBrightnessUp exec xbacklight -inc 10 # increase screen brightness
-bindsym XF86MonBrightnessDown exec xbacklight -dec 10 # decrease screen brightness
+bindsym XF86MonBrightnessUp exec xbacklight -inc 5 # increase screen brightness
+bindsym XF86MonBrightnessDown exec xbacklight -dec 5 # decrease screen brightness
 
 # music control
 bindsym XF86AudioNext exec mpc next
@@ -140,7 +140,7 @@ bindsym $super+r mode "resize"
 # panel
 bar {
         colors {
-        background #000030
+        background #000000
         statusline #2f343f
         separator #4b5262
 
@@ -154,11 +154,11 @@ bar {
 }
 
 # window rules, you can find the window class using xprop
-for_window [class=".*"] border pixel 2
+for_window [class=".*"] border pixel 3
 gaps inner 30
 #assign [class="URxvt"] 1
 assign [class="firefox"]  2:
-assign [class="Org.gnome.Nautilus|ranger"]  3:
+assign [class="Org.gnome.Nautilus|ranger|Thunar"]  3:
 assign [class="vlc"] 
 #assign [class=Audacity|Vlc|mpv|Ghb|Xfburn|Gimp*|Inkscape] 5
 assign [class="spotify free"] 6
@@ -167,9 +167,9 @@ assign [class="spotify free"] 6
 #for_window [class=Xfburn|GParted|System-config-printer.py|Lxtask|Pavucontrol|Exo-helper*|Lxrandr|Arandr] focus
 
 # colour of border, background, text, indicator, and child_border
-client.focused              #bf616a #2f343f #d8dee8 #bf616a #ffffff
+client.focused              #bf616a #2f343f #d8dee8 #bf616a #f37f97
 client.focused_inactive     #2f343f #2f343f #d8dee8 #2f343f #000000
-client.unfocused            #2f343f #2f343f #d8dee8 #2f343f #131520
+client.unfocused            #2f343f #2f343f #d8dee8 #2f343f #16171e
 client.urgent               #2f343f #2f343f #d8dee8 #2f343f #2f343f
 client.placeholder          #2f343f #2f343f #d8dee8 #2f343f #2f343f
 client.background           #2f343f
