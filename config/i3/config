@@ -24,10 +24,18 @@ exec_always --no-startup-id nm-applet
 # start a terminal
 bindsym $super+Return exec i3-sensible-terminal
 
+#wifi menu
+bindsym $super+w exec urxvt -e bash -c nmtui
+
+#powermanager
+bindsym $super+b exec xfce4-power-manager-settings
+
 #rofi menus
 bindsym $super+d exec ~/.config/rofi/scripts/appsmenu.sh
 bindsym $super+p exec ~/.config/rofi/scripts/powermenu.sh
-#bindsym $super+w exec ~/.config/rofi/scripts/networkmenu.py
+
+#polybar
+exec_always --no-startup-id ~/.config/polybar/launch.sh
 
 # common apps keybinds
 bindsym Print exec scrot 'Cheese_%a-%d%b%y_%H.%M.png' -e 'viewnior ~/$f'
@@ -50,7 +58,7 @@ bindsym XF86AudioPlay exec mpc toggle
 bindsym XF86AudioStop exec mpc stop
 
 # kill focused window
-bindsym $super+q kill
+bindsym $super+Shift+q kill
 bindsym $alt+F4 kill
 
 #kill not responding windows
@@ -138,24 +146,23 @@ mode "resize" {
 bindsym $super+r mode "resize"
 
 # panel
-bar {
-        colors {
-        background #000000
-        statusline #2f343f
-        separator #4b5262
-
-        # colour of border, background, and text
-        focused_workspace       #2f343f #bf616a #d8dee8
-        active_workspace        #2f343f #2f343f #d8dee8
-        inactive_workspace      #2f343f #2f343f #d8dee8
-        urgent_workspacei       #2f343f #ebcb8b #2f343f
-    }
-        status_command i3status
-}
+#bar {
+#        colors {
+#        background #000000
+#        statusline #2f343f
+#        separator #4b5262
+#
+#        # colour of border, background, and text
+#        focused_workspace       #2f343f #bf616a #d8dee8
+#        active_workspace        #2f343f #2f343f #d8dee8
+#        inactive_workspace      #2f343f #2f343f #d8dee8
+#    }
+#        status_command i3status
+#}
 
 # window rules, you can find the window class using xprop
-for_window [class=".*"] border pixel 3
-gaps inner 10
+for_window [class=".*"] border pixel 7
+gaps inner 20
 #assign [class="URxvt"]
 #assign [class="firefox"]  2
 #assign [class="Org.gnome.Nautilus|ranger|Thunar"]  3
@@ -163,11 +170,11 @@ assign [class="vlc"] 9
 #assign [class=Audacity|Vlc|mpv|Ghb|Xfburn|Gimp*|Inkscape] 5
 #assign [class="spotify free"] 6
 #for_window [class=Viewnior|feh|Audacious|File-roller|Lxappearance|Lxtask|Pavucontrol] floating enable
-#for_window [class=URxvt|Firefox|Geany|Evince|Soffice|libreoffice*|mpv|Ghb|Xfburn|Gimp*|Inkscape|Vlc|Lxappearance|Audacity] focus
+for_window [class=vlc] focus
 #for_window [class=Xfburn|GParted|System-config-printer.py|Lxtask|Pavucontrol|Exo-helper*|Lxrandr|Arandr] focus
 
 # colour of border, background, text, indicator, and child_border
-client.focused              #bf616a #2f343f #d8dee8 #bf616a #2777ff
+client.focused              #bf616a #2f343f #d8dee8 #ffffff #ffffff
 client.focused_inactive     #2f343f #2f343f #d8dee8 #2f343f #000000
 client.unfocused            #2f343f #2f343f #d8dee8 #2f343f #16171e
 client.urgent               #2f343f #2f343f #d8dee8 #2f343f #2f343f
