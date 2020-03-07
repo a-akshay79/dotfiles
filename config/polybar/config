@@ -6,7 +6,7 @@
 ;---------------------------------------
 
 [colors]
-black = #263238
+black = #011F43
 white = #D8DEE9
 red = #BF616A
 red1 = #BF3B48
@@ -23,7 +23,7 @@ orange1 = #D06847
 yellow = #CFB074
 yellow1 = #CF9B36
 focus = #56A4BA
-focus1 = #757575
+focus1 = #7AACBA
 unfocus = #1A2328
 unfocus1 = #101010
 ;---------------------------------------
@@ -32,8 +32,8 @@ unfocus1 = #101010
 
 [bar/nord]
 width = 100%
-height = 24
-bottom = true
+height = 25
+bottom = false
 border-size = 0
 background = ${colors.black}
 foreground = ${colors.white}
@@ -48,7 +48,7 @@ module-margin-right = 1
 ;		FONTS
 ;---------------------------------------
 
-font-0 = TerminessTTF Nerd Font:weight=bold:size=12;2
+font-0 = TerminessTTF Nerd Font:weight=bold:size=13;2
 
 ;---------------------------------------
 ;	     MODULES LAYOUT
@@ -103,8 +103,8 @@ format-connected-foreground = ${colors.black}
 format-connected-background = ${colors.yellow}
 format-connected-underline = ${colors.yellow1}
 format-disconnected-foreground = ${colors.black}
-format-disconnected-background = ${colors.orange}
-format-disconnected-underline = ${colors.orange1}
+format-disconnected-background = ${colors.red}
+format-disconnected-underline = ${colors.red1}
 
 
 
