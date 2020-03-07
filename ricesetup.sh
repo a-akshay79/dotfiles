@@ -6,20 +6,18 @@ git clone https://github.com/a-akshay79/dotfiles.git
 
 cd dotfiles
 
-cp config/* ~/.config
+cp -r config/* ~/.config
 
-mv Xresources ~/.Xresources
+mv  Xresources ~/.Xresources
 
 mv xsettingsd ~/.xsettingsd
 
 mv walls/wallpaper.jpg ~/.wallpaper.jpg
 
-mkdir ~/fonts
-
-cp fonts/* ~/fonts
+cp -r fonts/* ~/fonts
 
 mkdir ~/urxvt && mkdir ~/urxvt/ext 
 
-cp /urxvt/ext/* ~/urxvt/ext
+cp -r /urxvt/ext/* ~/urxvt/ext
 
 
