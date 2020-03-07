@@ -8,11 +8,11 @@ cd dotfiles
 
 cp config/* ~/.config
 
-cp Xresources ~/.Xresources
+mv Xresources ~/.Xresources
 
-cp xsettingsd ~/.xsettingsd
+mv xsettingsd ~/.xsettingsd
 
-cp walls/wallpaper.jpg ~/.wallpaper.jpg
+mv walls/wallpaper.jpg ~/.wallpaper.jpg
 
 mkdir ~/fonts
 
