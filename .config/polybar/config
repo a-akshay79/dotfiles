@@ -6,7 +6,7 @@
 ;---------------------------------------
 
 [colors]
-trans = #00000000
+trans = #40000000
 black = #000000
 white = #FFFFFF
 red = #BF616A
@@ -33,13 +33,13 @@ unfocus1 = #101010
 
 [bar/nord]
 width = 100%
-height = 24
+height = 30
 bottom = false
 border-size = 0
 background = ${colors.trans}
 foreground = ${colors.white}
-fixed-center = true
-line-size = 4
+fixed-center = true 
+;line-size = 4
 line-color = #f00
 padding-left = 0
 padding-right = 0
@@ -48,13 +48,13 @@ module-margin-right = 1
 
 font-0 = TerminessTTF Nerd Font:weight=bold:size=13;2
 
-modules-left = i3 
-modules-right = battery sessions
+modules-left = i3 xwindow
+modules-right =network pulseaudio battery sessions
 modules-center = date
 
 tray-background = ${colors.trans}
 tray-detached = false
-tray-padding = 9
+tray-padding = 5
 tray-position = right
 tray-maxsize = 18
 ;---------------------------------------
@@ -69,14 +69,14 @@ border-size = 0
 background = ${colors.trans}
 foreground = ${colors.white}
 fixed-center = true
-line-size = 2
+line-size = 3
 line-color = #f00
 padding-left = 0
 padding-right = 0
 module-margin-left = 0
 module-margin-right = 1
 
-font-0 = TerminessTTF Nerd Font:weight=bold:size=13;2
+font-0 = TerminessTTF Nerd Font:weight=bold:size=15;2
 
 modules-left = memory cpu temperature 
 modules-right = network xbacklight pulseaudio
@@ -113,6 +113,7 @@ format-foreground = ${colors.white}
 format-underline = ${colors.orange1}
 
 
+
 ;---------------------------------------
 ;              NETWORK
 ;---------------------------------------
@@ -122,7 +123,7 @@ interface = wlp2s0
 interval = 3.0
 format-connected = <label-connected>
 format-disconnected = <label-disconnected>
-label-connected ="  %essid%%downspeed:9% "
+label-connected =" %downspeed:9% "
 label-disconnected = " 睊 "
 format-connected-foreground = ${colors.white}
 ;format-connected-background = ${colors.yellow}
@@ -144,7 +145,7 @@ format = <label>
 label = "﬙%percentage:2%% "
 format-foreground = ${colors.white}
 ;format-background = ${colors.cyan}
-format-padding = 1
+format-padding = 2
 format-underline = ${colors.cyan1}
 
 ;---------------------------------------
@@ -193,7 +194,7 @@ type = internal/xwindow
 format-foreground = ${colors.white}
 ;format-background = ${colors.black}
 format-padding = 5
-label = %title:0:50:...%
+label = %title:0:25:...%
 
 ;---------------------------------------
 ;	   XBACKLIGHT
@@ -205,7 +206,7 @@ format = <label>
 format-foreground = ${colors.white}
 ;format-background = ${colors.orange}
 label = " 盛 %percentage%% "
-format-underline = ${colors.orange1}
+format-underline = ${colors.green}
 ;---------------------------------------
 ;	   DATE
 ;---------------------------------------
@@ -230,26 +231,26 @@ use-ui-max = true
 interval = 5
 format-volume = <ramp-volume><label-volume>
 format-volume-foreground = ${colors.white}
-;format-volume-background = ${colors.yellow}
+;format-volume-background = ${colors.blue}
 label-volume = "%percentage% "
 label-volume-foreground = ${colors.white}
-;label-volume-background = ${colors.yellow}
+;label-volume-background = ${colors.blue}
 label-muted = " mute "
 label-muted-foreground = ${colors.white}
-;label-muted-background = ${colors.yellow}
+;label-muted-background = ${colors.blue}
 ramp-volume-0 = "  "
 ramp-volume-0-foreground = ${colors.white}
-;ramp-volume-0-background = ${colors.yellow}
+;ramp-volume-0-background = ${colors.blue}
 ramp-volume-1 = "  "
 ramp-volume-1-foreground = ${colors.white}
-;ramp-volume-1-background = ${colors.yellow}
+;ramp-volume-1-background = ${colors.blue}
 ramp-volume-2 = "  "
 ramp-volume-2-foreground = ${colors.white}
-;ramp-volume-2-background = ${colors.yellow}
+;ramp-volume-2-background = ${colors.blue}
 ramp-volume-3 = "  "
 ramp-volume-3-foreground = ${colors.white}
 ;ramp-volume-3-background = ${colors.yellow}
-format-volume-underline = ${colors.yellow1}
+format-volume-underline = ${colors.blue}
 ;---------------------------------------
 ;	   BATTERY
 ;---------------------------------------

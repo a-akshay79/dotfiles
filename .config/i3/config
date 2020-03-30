@@ -2,6 +2,13 @@
 set $super Mod1
 set $alt Mod4
 
+#layout switch
+bindsym $super+e layout stacked
+bindsym $super+w layout toggle split
+
+#flashfocus
+#exec_always --no-startup-id flashfocus
+
 # set font
 font pango: Ubuntu Mono 14
 
@@ -22,10 +29,13 @@ exec_always --no-startup-id compton -b
 exec_always --no-startup-id nm-applet
 
 # start a terminal
-bindsym $super+Return exec i3-sensible-terminal
+bindsym $super+Return exec xfce4-terminal
+
+#file manager
+bindsym $super+t exec thunar
 
 #wifi menu
-bindsym $super+w exec urxvt -e bash -c nmtui
+#bindsym $super+w exec urxvt -e bash -c nmtui
 
 #powermanager
 bindsym $super+b exec xfce4-power-manager-settings
@@ -34,7 +44,7 @@ bindsym $super+b exec xfce4-power-manager-settings
 bindsym $super+Shift+b exec blueman-manager
 
 #rofi menus
-bindsym $super+d exec ~/.config/rofi/launchers-git/launcher.sh
+bindsym $super+d exec ~/.config/rofi/scripts/appsmenu.sh
 
 #polybar
 exec_always --no-startup-id ~/.config/polybar/launch.sh
@@ -156,8 +166,8 @@ bindsym $super+r mode "resize"
 #}
 
 # window rules, you can find the window class using xprop
-for_window [class=".*"] border pixel 4
-gaps inner 20
+for_window [class=".*"] border pixel 3
+gaps inner 10
 #gaps outer 25
 #smart_borders on
 #smart_gaps on
