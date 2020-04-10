@@ -34,7 +34,7 @@ bindsym $super+b exec xfce4-power-manager-settings
 bindsym $super+Shift+b exec blueman-manager
 
 #rofi menus
-bindsym $super+d exec ~/.config/rofi/scripts/appsmenu.sh
+bindsym $super+d exec ~/.config/rofi/launchers-git/launcher.sh
 
 #polybar
 exec_always --no-startup-id ~/.config/polybar/launch.sh
@@ -132,11 +132,11 @@ bindsym $super+Shift+r restart
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
-        bindsym Left resize shrink width 5 px or 5 ppt
-        bindsym Down resize grow height 5 px or 5 ppt
-        bindsym Up resize shrink height 5 px or 5 ppt
-        bindsym Right resize grow width 5 px or 5 ppt
-        bindsym Return mode "default"
+        bindsym h resize shrink width 5 px or 5 ppt
+        bindsym j resize grow height 5 px or 5 ppt
+        bindsym k resize shrink height 5 px or 5 ppt
+        bindsym l resize grow width 5 px or 5 ppt
+        bindsym Escape mode "default"
 }
 bindsym $super+r mode "resize"
 
