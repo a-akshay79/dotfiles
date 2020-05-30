@@ -13,3 +13,5 @@ xorg-xbacklight
 xclip
 lxappearance
 xsel
+compton
+polybar
