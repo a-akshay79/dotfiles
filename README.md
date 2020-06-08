@@ -7,11 +7,11 @@ rofi
 dmenu
 scrot
 feh
-rxvt-unicode
 xsettingsd
 xorg-xbacklight
 xclip
-lxappearance
 xsel
-compton
+compton-tryone
 polybar
+nerd-font-terminus
+base-devel
